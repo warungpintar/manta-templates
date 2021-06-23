@@ -1,0 +1,18 @@
+{
+  "package.json": [
+    {
+      "name": "author_name",
+      "message": "Author Name"
+    },
+    {
+      "name": "package_name",
+      "message": "Package Name"
+    }
+  ],
+  "src/index.ts": [
+    {
+      "name": "first_message",
+      "message": "Your first message to the world!"
+    }
+  ]
+}

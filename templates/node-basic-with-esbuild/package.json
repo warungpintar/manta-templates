@@ -1,0 +1,33 @@
+{
+  "name": "<%=package_name%>",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:<%=author_name%>/<%=package_name%>.git",
+  "author": "<%=author_name%>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "concurrently yarn:build:*",
+    "build:lib": "./scripts/build.js",
+    "build:types": "tsc --declaration --emitDeclarationOnly",
+    "dev": "./scripts/watch.js",
+    "test": "concurrently yarn:test:*",
+    "test:type": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.170",
+    "concurrently": "^6.2.0",
+    "esbuild": "^0.12.7",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
